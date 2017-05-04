@@ -1,0 +1,10 @@
+define	main:	
+addi	$sp	$sp	-12	
+read	func	
+=	#0	$v0	
+read	func	
+=	#4	$v0	
++	#0	#4	
+write	@-1	
+addi	$sp	$sp	12	
+return	0	

@@ -1,0 +1,37 @@
+7 PROGRAM: EXTDEFS
+	7 EXTDEFS: EXTDEFS EXTDEF
+		1 EXTDEFS: null
+		7 EXTDEF: TYPE FUNC STMTBLOCK
+			7 int
+			2 FUNC: ID ( PARA )
+				2 main
+				2 PARA: null
+			7 STMTBLOCK: { DEFS STMTS }
+				3 DEFS: DEFS TYPE DECS ;
+					2 DEFS: null
+					3 int
+					3 DECS: DECS , VAR
+						3 DECS: VAR
+							3 VAR: ID
+								3 a
+						3 VAR: ID
+							3 b
+				6 STMTS: STMTS STMT
+					5 STMTS: STMTS STMT
+						4 STMTS: STMTS STMT
+							4 STMTS: null
+							4 STMT: READ ( EXPS );
+								4 read
+								4 EXPS: ID
+									4 a
+						5 STMT: READ ( EXPS );
+							5 read
+							5 EXPS: ID
+								5 b
+					6 STMT: WRITE ( EXPS );
+						6 write
+						6 +
+							6 EXPS: ID
+								6 a
+							6 EXPS: ID
+								6 b

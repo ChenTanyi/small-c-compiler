@@ -1,0 +1,45 @@
+
+int main(){
+	int a, b;
+	read(a);
+	read(b);
+	write(a + b);
+	write(a - b);
+	write(a * b);
+	write(a / b);
+	write(a % b);
+	write(a & b);
+	write(a | b);
+	write(a ^ b);
+	write(~a);
+	write(a << 2);
+	write(a >> 2);
+	write(a < b);
+	write(a > b);
+	write(a <= b);
+	write(a >= b);
+	write(a == b);
+	write(a != b);
+	write(a && b);
+	write(a || b);
+	write(!a);
+	write(++a);
+	write(--b);
+	write(a += 1);
+	write(a -= 1);
+	write(a *= 2);
+	write(a /= 2);
+	write(a &= 0x1f);
+	write(a |= 0x15);
+	write(a %= 3);
+	write(a ^= 0x28);
+	write(b <<= 2);
+	write(b >>= 2);
+	write(a = b);
+	write(a == b);
+	write(a != b);
+	write(a <= b);
+	write(a < b);
+	write(a >= b);
+	write(a > b);
+}

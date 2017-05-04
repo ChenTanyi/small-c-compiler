@@ -1,0 +1,84 @@
+12 PROGRAM: EXTDEFS
+	12 EXTDEFS: EXTDEFS EXTDEF
+		5 EXTDEFS: EXTDEFS EXTDEF
+			1 EXTDEFS: null
+			5 EXTDEF: TYPE FUNC STMTBLOCK
+				5 int
+				1 FUNC: ID ( PARA )
+					1 gcd
+					1 PARA: PARAS
+						1 PARAS: PARAS , TYPE ID
+							1 PARAS: TYPE ID
+								1 int
+								1 a
+							1 int
+							1 b
+				5 STMTBLOCK: { DEFS STMTS }
+					1 DEFS: null
+					4 STMTS: STMTS STMT
+						4 STMTS: STMTS STMT
+							2 STMTS: null
+							4 STMT: IF ( EXPS ) STMT
+								4 if
+								2 EXPS: UNARY_OP EXPS
+									2 !
+									2 EXPS: ID
+										2 b
+								3 STMT: RETURN EXP ;
+									3 return
+									3 EXP: EXPS
+										3 EXPS: ID
+											3 a
+						4 STMT: RETURN EXP ;
+							4 return
+							4 EXP: EXPS
+								4 EXPS: ID ( ARG )
+									4 gcd
+									4 ARG: ARGS
+										4 ARGS: ARGS , EXPS
+											4 ARGS: EXPS
+												4 EXPS: ID
+													4 b
+											4 %
+												4 EXPS: ID
+													4 a
+												4 EXPS: ID
+													4 b
+		12 EXTDEF: TYPE FUNC STMTBLOCK
+			12 int
+			7 FUNC: ID ( PARA )
+				7 main
+				7 PARA: null
+			12 STMTBLOCK: { DEFS STMTS }
+				8 DEFS: DEFS TYPE DECS ;
+					7 DEFS: null
+					8 int
+					8 DECS: DECS , VAR
+						8 DECS: VAR
+							8 VAR: ID
+								8 a
+						8 VAR: ID
+							8 b
+				11 STMTS: STMTS STMT
+					10 STMTS: STMTS STMT
+						9 STMTS: STMTS STMT
+							9 STMTS: null
+							9 STMT: READ ( EXPS );
+								9 read
+								9 EXPS: ID
+									9 a
+						10 STMT: READ ( EXPS );
+							10 read
+							10 EXPS: ID
+								10 b
+					11 STMT: WRITE ( EXPS );
+						11 write
+						11 EXPS: ID ( ARG )
+							11 gcd
+							11 ARG: ARGS
+								11 ARGS: ARGS , EXPS
+									11 ARGS: EXPS
+										11 EXPS: ID
+											11 a
+									11 EXPS: ID
+										11 b

@@ -1,0 +1,261 @@
+51 PROGRAM: EXTDEFS
+	51 EXTDEFS: EXTDEFS EXTDEF
+		15 EXTDEFS: EXTDEFS EXTDEF
+			13 EXTDEFS: EXTDEFS EXTDEF
+				9 EXTDEFS: EXTDEFS EXTDEF
+					4 EXTDEFS: EXTDEFS EXTDEF
+						1 EXTDEFS: null
+						4 EXTDEF: STSPEC SEXTVAR ;
+							4 STSPEC: STRUCT ID { SDEFS }
+								4 struct
+								4 a
+								3 SDEFS: SDEFS TYPE SDECS ;
+									2 SDEFS: SDEFS TYPE SDECS ;
+										1 SDEFS: null
+										2 int
+										2 SDECS: ID
+											2 x
+									3 int
+									3 SDECS: ID
+										3 y
+							4 SEXTVAR: null
+					9 EXTDEF: STSPEC SEXTVAR ;
+						9 STSPEC: STRUCT ID { SDEFS }
+							9 struct
+							9 b
+							8 SDEFS: SDEFS TYPE SDECS ;
+								7 SDEFS: SDEFS TYPE SDECS ;
+									6 SDEFS: null
+									7 int
+									7 SDECS: ID
+										7 a
+								8 int
+								8 SDECS: ID
+									8 x
+						9 SEXTVAR: SEXTVARS
+							9 SEXTVARS: ID
+								9 c
+				13 EXTDEF: STSPEC SEXTVAR ;
+					13 STSPEC: STRUCT { SDEFS }
+						13 struct
+						12 SDEFS: SDEFS TYPE SDECS ;
+							11 SDEFS: null
+							12 int
+							12 SDECS: ID
+								12 w
+					13 SEXTVAR: SEXTVARS
+						13 SEXTVARS: ID
+							13 d
+			15 EXTDEF: TYPE EXTVARS ;
+				15 int
+				15 EXTVARS: VAR
+					15 VAR: ID
+						15 l
+		51 EXTDEF: TYPE FUNC STMTBLOCK
+			51 int
+			17 FUNC: ID ( PARA )
+				17 main
+				17 PARA: null
+			51 STMTBLOCK: { DEFS STMTS }
+				29 DEFS: DEFS STSPEC SDECS ;
+					28 DEFS: DEFS STSPEC SDECS ;
+						27 DEFS: DEFS STSPEC SDECS ;
+							26 DEFS: DEFS STSPEC SDECS ;
+								23 DEFS: DEFS STSPEC SDECS ;
+									20 DEFS: DEFS STSPEC SDECS ;
+										17 DEFS: null
+										20 STSPEC: STRUCT ID { SDEFS }
+											20 struct
+											20 e
+											19 SDEFS: SDEFS TYPE SDECS ;
+												18 SDEFS: null
+												19 int
+												19 SDECS: ID
+													19 a
+										20 SDECS: ID
+											20 w
+									23 STSPEC: STRUCT ID { SDEFS }
+										23 struct
+										23 f
+										22 SDEFS: SDEFS TYPE SDECS ;
+											21 SDEFS: null
+											22 int
+											22 SDECS: ID
+												22 e
+									23 SDECS: ID
+										23 g
+								26 STSPEC: STRUCT { SDEFS }
+									26 struct
+									25 SDEFS: SDEFS TYPE SDECS ;
+										24 SDEFS: null
+										25 int
+										25 SDECS: ID
+											25 h
+								26 SDECS: ID
+									26 h
+							27 STSPEC: STRUCT ID
+								27 struct
+								27 a
+							27 SDECS: ID
+								27 x
+						28 STSPEC: STRUCT ID
+							28 struct
+							28 b
+						28 SDECS: ID
+							28 y
+					29 STSPEC: STRUCT ID
+						29 struct
+						29 e
+					29 SDECS: ID
+						29 z
+				50 STMTS: STMTS STMT
+					49 STMTS: STMTS STMT
+						48 STMTS: STMTS STMT
+							47 STMTS: STMTS STMT
+								46 STMTS: STMTS STMT
+									45 STMTS: STMTS STMT
+										44 STMTS: STMTS STMT
+											43 STMTS: STMTS STMT
+												42 STMTS: STMTS STMT
+													41 STMTS: STMTS STMT
+														40 STMTS: STMTS STMT
+															39 STMTS: STMTS STMT
+																38 STMTS: STMTS STMT
+																	37 STMTS: STMTS STMT
+																		36 STMTS: STMTS STMT
+																			35 STMTS: STMTS STMT
+																				34 STMTS: STMTS STMT
+																					33 STMTS: STMTS STMT
+																						32 STMTS: STMTS STMT
+																							31 STMTS: STMTS STMT
+																								31 STMTS: null
+																								31 STMT: EXP ;
+																									31 EXP: EXPS
+																										31 =
+																											31 EXPS: ID . ID
+																												31 c
+																												31 a
+																											31 EXPS: INT
+																												31 1
+																							32 STMT: EXP ;
+																								32 EXP: EXPS
+																									32 =
+																										32 EXPS: ID . ID
+																											32 c
+																											32 x
+																										32 EXPS: INT
+																											32 2
+																						33 STMT: EXP ;
+																							33 EXP: EXPS
+																								33 =
+																									33 EXPS: ID . ID
+																										33 d
+																										33 w
+																									33 EXPS: INT
+																										33 3
+																					34 STMT: EXP ;
+																						34 EXP: EXPS
+																							34 =
+																								34 EXPS: ID . ID
+																									34 g
+																									34 e
+																								34 EXPS: INT
+																									34 4
+																				35 STMT: EXP ;
+																					35 EXP: EXPS
+																						35 =
+																							35 EXPS: ID . ID
+																								35 h
+																								35 h
+																							35 EXPS: INT
+																								35 5
+																			36 STMT: EXP ;
+																				36 EXP: EXPS
+																					36 =
+																						36 EXPS: ID . ID
+																							36 x
+																							36 x
+																						36 EXPS: INT
+																							36 6
+																		37 STMT: EXP ;
+																			37 EXP: EXPS
+																				37 =
+																					37 EXPS: ID . ID
+																						37 x
+																						37 y
+																					37 EXPS: INT
+																						37 7
+																	38 STMT: EXP ;
+																		38 EXP: EXPS
+																			38 =
+																				38 EXPS: ID . ID
+																					38 y
+																					38 a
+																				38 EXPS: INT
+																					38 8
+																39 STMT: EXP ;
+																	39 EXP: EXPS
+																		39 =
+																			39 EXPS: ID . ID
+																				39 y
+																				39 x
+																			39 EXPS: INT
+																				39 9
+															40 STMT: EXP ;
+																40 EXP: EXPS
+																	40 =
+																		40 EXPS: ID . ID
+																			40 z
+																			40 a
+																		40 EXPS: INT
+																			40 10
+														41 STMT: WRITE ( EXPS );
+															41 write
+															41 EXPS: ID . ID
+																41 c
+																41 a
+													42 STMT: WRITE ( EXPS );
+														42 write
+														42 EXPS: ID . ID
+															42 c
+															42 x
+												43 STMT: WRITE ( EXPS );
+													43 write
+													43 EXPS: ID . ID
+														43 d
+														43 w
+											44 STMT: WRITE ( EXPS );
+												44 write
+												44 EXPS: ID . ID
+													44 g
+													44 e
+										45 STMT: WRITE ( EXPS );
+											45 write
+											45 EXPS: ID . ID
+												45 h
+												45 h
+									46 STMT: WRITE ( EXPS );
+										46 write
+										46 EXPS: ID . ID
+											46 x
+											46 x
+								47 STMT: WRITE ( EXPS );
+									47 write
+									47 EXPS: ID . ID
+										47 x
+										47 y
+							48 STMT: WRITE ( EXPS );
+								48 write
+								48 EXPS: ID . ID
+									48 y
+									48 a
+						49 STMT: WRITE ( EXPS );
+							49 write
+							49 EXPS: ID . ID
+								49 y
+								49 x
+					50 STMT: WRITE ( EXPS );
+						50 write
+						50 EXPS: ID . ID
+							50 z
+							50 a

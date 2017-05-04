@@ -1,0 +1,27 @@
+global	array	s	50	
+define	main:	
+addi	$sp	$sp	-12	
+read	func	
+=	#0	$v0	
+=	#4	0	
+label	for.loop.1.start:	
+beq	1	$0	for.loop.1.end	
+<=	#0	10	
+beq	@-1	$0	if.1.end	
+>	#4	#0	
+beq	@-1	$0	if.2.else	
+j	for.loop.1.end	
+j	if.2.end	
+label	if.2.else:	
++=	#4	1	
+label	if.2.end:	
+label	if.1.end:	
+-=	#0	1	
++=	#4	1	
+label	for.loop.1.next:	
+j	for.loop.1.start	
+label	for.loop.1.end:	
+write	#0	
+write	#4	
+addi	$sp	$sp	12	
+return	0	

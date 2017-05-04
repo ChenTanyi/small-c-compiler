@@ -1,0 +1,28 @@
+global	int	c.a	0	
+global	int	c.x	0	
+global	int	d.w	0	
+global	int	l	0	
+define	main:	
+addi	$sp	$sp	-36	
+=	#g_c.a	1	
+=	#g_c.x	2	
+=	#g_d.w	3	
+=	#4	4	
+=	#8	5	
+=	#12	6	
+=	#16	7	
+=	#20	8	
+=	#24	9	
+=	#28	10	
+write	#g_c.a	
+write	#g_c.x	
+write	#g_d.w	
+write	#4	
+write	#8	
+write	#12	
+write	#16	
+write	#20	
+write	#24	
+write	#28	
+addi	$sp	$sp	36	
+return	0	

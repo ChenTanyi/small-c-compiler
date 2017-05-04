@@ -1,0 +1,17 @@
+File Structure:
+	smallc.l 		Lexical Analyzer
+	smallc.y 		Syntax Analyzer
+	header.h 		cpp header file include all of the standard header I used in the project
+	tree.h 			basic tree node class of syntax tree declaration
+	tree.cpp 		basic tree node class implementation
+	node.h 			derived class of tree node declaration
+	node.cpp 		derived class implemetation
+	main.cpp		main function to do compiling
+	Makefile		make it easy for build and clean the project
+	quick-run.sh 	shell script to run for executing the testcase
+	scc				the final executable file for project
+	testInput		folder to save the test source code
+	InterCode		folder to save the intermediate code corresponding to testcase
+	MipsCode		folder to save the Mips code corresponding to testcase
+	ParserTree		folder to save the parser tree corresponding to testcase
+	5140309258-report.pdf 	project report

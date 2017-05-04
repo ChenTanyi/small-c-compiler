@@ -1,0 +1,36 @@
+global	array	a	5000	
+global	int	mod	1000000007	
+global	int	n	0	
+define	main:	
+[]=	#g_a	0	
+=	@-1	1	
+[]=	#g_a	4	
+=	@-1	1	
+addi	$sp	$sp	-8	
+read	func	
+=	#g_n	$v0	
+=	#0	2	
+label	for.loop.1.start:	
+<	#0	#g_n	
+beq	@-1	$0	for.loop.1.end	
+*	#0	4	
+[]=	#g_a	@-1	
+-	#0	2	
+*	@-1	4	
+[]	#g_a	@-1	
+-	#0	1	
+*	@-1	4	
+[]	#g_a	@-1	
++	@-4	@-1	
+%	@-1	#g_mod	
+=	@-9	@-1	
+label	for.loop.1.next:	
++=	#0	1	
+j	for.loop.1.start	
+label	for.loop.1.end:	
+-	#g_n	1	
+*	@-1	4	
+[]	#g_a	@-1	
+write	@-1	
+addi	$sp	$sp	8	
+return	0	

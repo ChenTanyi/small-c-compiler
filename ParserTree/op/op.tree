@@ -1,0 +1,337 @@
+45 PROGRAM: EXTDEFS
+	45 EXTDEFS: EXTDEFS EXTDEF
+		1 EXTDEFS: null
+		45 EXTDEF: TYPE FUNC STMTBLOCK
+			45 int
+			2 FUNC: ID ( PARA )
+				2 main
+				2 PARA: null
+			45 STMTBLOCK: { DEFS STMTS }
+				3 DEFS: DEFS TYPE DECS ;
+					2 DEFS: null
+					3 int
+					3 DECS: DECS , VAR
+						3 DECS: VAR
+							3 VAR: ID
+								3 a
+						3 VAR: ID
+							3 b
+				44 STMTS: STMTS STMT
+					43 STMTS: STMTS STMT
+						42 STMTS: STMTS STMT
+							41 STMTS: STMTS STMT
+								40 STMTS: STMTS STMT
+									39 STMTS: STMTS STMT
+										38 STMTS: STMTS STMT
+											37 STMTS: STMTS STMT
+												36 STMTS: STMTS STMT
+													35 STMTS: STMTS STMT
+														34 STMTS: STMTS STMT
+															33 STMTS: STMTS STMT
+																32 STMTS: STMTS STMT
+																	31 STMTS: STMTS STMT
+																		30 STMTS: STMTS STMT
+																			29 STMTS: STMTS STMT
+																				28 STMTS: STMTS STMT
+																					27 STMTS: STMTS STMT
+																						26 STMTS: STMTS STMT
+																							25 STMTS: STMTS STMT
+																								24 STMTS: STMTS STMT
+																									23 STMTS: STMTS STMT
+																										22 STMTS: STMTS STMT
+																											21 STMTS: STMTS STMT
+																												20 STMTS: STMTS STMT
+																													19 STMTS: STMTS STMT
+																														18 STMTS: STMTS STMT
+																															17 STMTS: STMTS STMT
+																																16 STMTS: STMTS STMT
+																																	15 STMTS: STMTS STMT
+																																		14 STMTS: STMTS STMT
+																																			13 STMTS: STMTS STMT
+																																				12 STMTS: STMTS STMT
+																																					11 STMTS: STMTS STMT
+																																						10 STMTS: STMTS STMT
+																																							9 STMTS: STMTS STMT
+																																								8 STMTS: STMTS STMT
+																																									7 STMTS: STMTS STMT
+																																										6 STMTS: STMTS STMT
+																																											5 STMTS: STMTS STMT
+																																												4 STMTS: STMTS STMT
+																																													4 STMTS: null
+																																													4 STMT: READ ( EXPS );
+																																														4 read
+																																														4 EXPS: ID
+																																															4 a
+																																												5 STMT: READ ( EXPS );
+																																													5 read
+																																													5 EXPS: ID
+																																														5 b
+																																											6 STMT: WRITE ( EXPS );
+																																												6 write
+																																												6 +
+																																													6 EXPS: ID
+																																														6 a
+																																													6 EXPS: ID
+																																														6 b
+																																										7 STMT: WRITE ( EXPS );
+																																											7 write
+																																											7 -
+																																												7 EXPS: ID
+																																													7 a
+																																												7 EXPS: ID
+																																													7 b
+																																									8 STMT: WRITE ( EXPS );
+																																										8 write
+																																										8 *
+																																											8 EXPS: ID
+																																												8 a
+																																											8 EXPS: ID
+																																												8 b
+																																								9 STMT: WRITE ( EXPS );
+																																									9 write
+																																									9 /
+																																										9 EXPS: ID
+																																											9 a
+																																										9 EXPS: ID
+																																											9 b
+																																							10 STMT: WRITE ( EXPS );
+																																								10 write
+																																								10 %
+																																									10 EXPS: ID
+																																										10 a
+																																									10 EXPS: ID
+																																										10 b
+																																						11 STMT: WRITE ( EXPS );
+																																							11 write
+																																							11 &
+																																								11 EXPS: ID
+																																									11 a
+																																								11 EXPS: ID
+																																									11 b
+																																					12 STMT: WRITE ( EXPS );
+																																						12 write
+																																						12 |
+																																							12 EXPS: ID
+																																								12 a
+																																							12 EXPS: ID
+																																								12 b
+																																				13 STMT: WRITE ( EXPS );
+																																					13 write
+																																					13 ^
+																																						13 EXPS: ID
+																																							13 a
+																																						13 EXPS: ID
+																																							13 b
+																																			14 STMT: WRITE ( EXPS );
+																																				14 write
+																																				14 EXPS: UNARY_OP EXPS
+																																					14 ~
+																																					14 EXPS: ID
+																																						14 a
+																																		15 STMT: WRITE ( EXPS );
+																																			15 write
+																																			15 <<
+																																				15 EXPS: ID
+																																					15 a
+																																				15 EXPS: INT
+																																					15 2
+																																	16 STMT: WRITE ( EXPS );
+																																		16 write
+																																		16 >>
+																																			16 EXPS: ID
+																																				16 a
+																																			16 EXPS: INT
+																																				16 2
+																																17 STMT: WRITE ( EXPS );
+																																	17 write
+																																	17 <
+																																		17 EXPS: ID
+																																			17 a
+																																		17 EXPS: ID
+																																			17 b
+																															18 STMT: WRITE ( EXPS );
+																																18 write
+																																18 >
+																																	18 EXPS: ID
+																																		18 a
+																																	18 EXPS: ID
+																																		18 b
+																														19 STMT: WRITE ( EXPS );
+																															19 write
+																															19 <=
+																																19 EXPS: ID
+																																	19 a
+																																19 EXPS: ID
+																																	19 b
+																													20 STMT: WRITE ( EXPS );
+																														20 write
+																														20 >=
+																															20 EXPS: ID
+																																20 a
+																															20 EXPS: ID
+																																20 b
+																												21 STMT: WRITE ( EXPS );
+																													21 write
+																													21 ==
+																														21 EXPS: ID
+																															21 a
+																														21 EXPS: ID
+																															21 b
+																											22 STMT: WRITE ( EXPS );
+																												22 write
+																												22 !=
+																													22 EXPS: ID
+																														22 a
+																													22 EXPS: ID
+																														22 b
+																										23 STMT: WRITE ( EXPS );
+																											23 write
+																											23 &&
+																												23 EXPS: ID
+																													23 a
+																												23 EXPS: ID
+																													23 b
+																									24 STMT: WRITE ( EXPS );
+																										24 write
+																										24 ||
+																											24 EXPS: ID
+																												24 a
+																											24 EXPS: ID
+																												24 b
+																								25 STMT: WRITE ( EXPS );
+																									25 write
+																									25 EXPS: UNARY_OP EXPS
+																										25 !
+																										25 EXPS: ID
+																											25 a
+																							26 STMT: WRITE ( EXPS );
+																								26 write
+																								26 EXPS: UNARY_OP EXPS
+																									26 ++
+																									26 EXPS: ID
+																										26 a
+																						27 STMT: WRITE ( EXPS );
+																							27 write
+																							27 EXPS: UNARY_OP EXPS
+																								27 --
+																								27 EXPS: ID
+																									27 b
+																					28 STMT: WRITE ( EXPS );
+																						28 write
+																						28 +=
+																							28 EXPS: ID
+																								28 a
+																							28 EXPS: INT
+																								28 1
+																				29 STMT: WRITE ( EXPS );
+																					29 write
+																					29 -=
+																						29 EXPS: ID
+																							29 a
+																						29 EXPS: INT
+																							29 1
+																			30 STMT: WRITE ( EXPS );
+																				30 write
+																				30 *=
+																					30 EXPS: ID
+																						30 a
+																					30 EXPS: INT
+																						30 2
+																		31 STMT: WRITE ( EXPS );
+																			31 write
+																			31 /=
+																				31 EXPS: ID
+																					31 a
+																				31 EXPS: INT
+																					31 2
+																	32 STMT: WRITE ( EXPS );
+																		32 write
+																		32 &=
+																			32 EXPS: ID
+																				32 a
+																			32 EXPS: INT
+																				32 0x1f
+																33 STMT: WRITE ( EXPS );
+																	33 write
+																	33 |=
+																		33 EXPS: ID
+																			33 a
+																		33 EXPS: INT
+																			33 0x15
+															34 STMT: WRITE ( EXPS );
+																34 write
+																34 %=
+																	34 EXPS: ID
+																		34 a
+																	34 EXPS: INT
+																		34 3
+														35 STMT: WRITE ( EXPS );
+															35 write
+															35 ^=
+																35 EXPS: ID
+																	35 a
+																35 EXPS: INT
+																	35 0x28
+													36 STMT: WRITE ( EXPS );
+														36 write
+														36 <<=
+															36 EXPS: ID
+																36 b
+															36 EXPS: INT
+																36 2
+												37 STMT: WRITE ( EXPS );
+													37 write
+													37 >>=
+														37 EXPS: ID
+															37 b
+														37 EXPS: INT
+															37 2
+											38 STMT: WRITE ( EXPS );
+												38 write
+												38 =
+													38 EXPS: ID
+														38 a
+													38 EXPS: ID
+														38 b
+										39 STMT: WRITE ( EXPS );
+											39 write
+											39 ==
+												39 EXPS: ID
+													39 a
+												39 EXPS: ID
+													39 b
+									40 STMT: WRITE ( EXPS );
+										40 write
+										40 !=
+											40 EXPS: ID
+												40 a
+											40 EXPS: ID
+												40 b
+								41 STMT: WRITE ( EXPS );
+									41 write
+									41 <=
+										41 EXPS: ID
+											41 a
+										41 EXPS: ID
+											41 b
+							42 STMT: WRITE ( EXPS );
+								42 write
+								42 <
+									42 EXPS: ID
+										42 a
+									42 EXPS: ID
+										42 b
+						43 STMT: WRITE ( EXPS );
+							43 write
+							43 >=
+								43 EXPS: ID
+									43 a
+								43 EXPS: ID
+									43 b
+					44 STMT: WRITE ( EXPS );
+						44 write
+						44 >
+							44 EXPS: ID
+								44 a
+							44 EXPS: ID
+								44 b

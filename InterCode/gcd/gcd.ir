@@ -1,0 +1,25 @@
+define	gcd:	
+addi	$sp	$sp	-12	
+!	#4	
+beq	@-1	$0	if.1.end	
+addi	$sp	$sp	12	
+return	#0	
+label	if.1.end:	
+paras	#-12	#4	
+%	#0	#4	
+paras	#-8	@-1	
+call	gcd	
+addi	$sp	$sp	12	
+return	@-2	
+define	main:	
+addi	$sp	$sp	-12	
+read	func	
+=	#0	$v0	
+read	func	
+=	#4	$v0	
+paras	#-12	#0	
+paras	#-8	#4	
+call	gcd	
+write	@-1	
+addi	$sp	$sp	12	
+return	0	

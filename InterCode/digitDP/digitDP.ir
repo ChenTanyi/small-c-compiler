@@ -1,0 +1,177 @@
+global	array	dp	520	
+global	array	digit	10	
+define	dfs:	
+addi	$sp	$sp	-36	
+=	#0	#12	
+=	#4	#16	
+=	#8	#20	
+=	#12	#24	
+=	#16	#28	
+!	#0	
+beq	@-1	$0	if.1.end	
+==	#4	0	
+&&	@-1	#8	
+beq	@-1	$0	if.2.else	
+addi	$sp	$sp	36	
+return	1	
+j	if.2.end	
+label	if.2.else:	
+addi	$sp	$sp	36	
+return	0	
+label	if.2.end:	
+label	if.1.end:	
+!	#16	
+*	#0	208	
+*	#4	16	
++	@-1	@-2	
+*	#8	8	
++	@-1	@-2	
+*	#12	4	
++	@-1	@-2	
+[]	#g_dp	@-1	
+-	$0	1	
+!=	@-2	@-1	
+&&	@-11	@-1	
+beq	@-1	$0	if.3.end	
+*	#0	208	
+*	#4	16	
++	@-1	@-2	
+*	#8	8	
++	@-1	@-2	
+*	#12	4	
++	@-1	@-2	
+[]	#g_dp	@-1	
+addi	$sp	$sp	36	
+return	@-2	
+label	if.3.end:	
+=	#20	0	
+beq	#16	$0	if.4.else	
+*	#0	4	
+[]	#g_digit	@-1	
+=	#24	@-1	
+j	if.4.end	
+label	if.4.else:	
+=	#24	9	
+label	if.4.end:	
+=	#28	0	
+label	for.loop.1.start:	
+<=	#28	#24	
+beq	@-1	$0	for.loop.1.end	
+-	#0	1	
+paras	#-24	@-1	
+*	#4	10	
++	@-1	#28	
+%	@-1	13	
+paras	#-20	@-1	
+==	#28	3	
+&&	#12	@-1	
+||	#8	@-1	
+paras	#-16	@-1	
+==	#28	1	
+paras	#-12	@-1	
+==	#28	#24	
+&&	#16	@-1	
+paras	#-8	@-1	
+call	dfs	
++=	#20	@-1	
+label	for.loop.1.next:	
++=	#28	1	
+j	for.loop.1.start	
+label	for.loop.1.end:	
+!	#16	
+beq	@-1	$0	if.5.end	
+*	#0	208	
+*	#4	16	
++	@-1	@-2	
+*	#8	8	
++	@-1	@-2	
+*	#12	4	
++	@-1	@-2	
+[]=	#g_dp	@-1	
+=	@-1	#20	
+label	if.5.end:	
+addi	$sp	$sp	36	
+return	#20	
+define	fun:	
+addi	$sp	$sp	-12	
+=	#0	#4	
+=	#4	0	
+label	for.loop.2.start:	
+beq	#0	$0	for.loop.2.end	
++=	#4	1	
+*	@-1	4	
+[]=	#g_digit	@-1	
+%	#0	10	
+=	@-2	@-1	
+/=	#0	10	
+label	for.loop.2.next:	
+j	for.loop.2.start	
+label	for.loop.2.end:	
+paras	#-24	#4	
+paras	#-20	0	
+paras	#-16	0	
+paras	#-12	0	
+paras	#-8	1	
+call	dfs	
+addi	$sp	$sp	12	
+return	@-2	
+define	main:	
+addi	$sp	$sp	-24	
+=	#4	0	
+label	for.loop.3.start:	
+<	#4	10	
+beq	@-1	$0	for.loop.3.end	
+=	#8	0	
+label	for.loop.4.start:	
+<	#8	13	
+beq	@-1	$0	for.loop.4.end	
+=	#12	0	
+label	for.loop.5.start:	
+<	#12	2	
+beq	@-1	$0	for.loop.5.end	
+=	#16	0	
+label	for.loop.6.start:	
+<	#16	2	
+beq	@-1	$0	for.loop.6.end	
+*	#4	208	
+*	#8	16	
++	@-1	@-2	
+*	#12	8	
++	@-1	@-2	
+*	#16	4	
++	@-1	@-2	
+[]=	#g_dp	@-1	
+-	$0	1	
+=	@-2	@-1	
+label	for.loop.6.next:	
++=	#16	1	
+j	for.loop.6.start	
+label	for.loop.6.end:	
+label	for.loop.5.next:	
++=	#12	1	
+j	for.loop.5.start	
+label	for.loop.5.end:	
+label	for.loop.4.next:	
++=	#8	1	
+j	for.loop.4.start	
+label	for.loop.4.end:	
+label	for.loop.3.next:	
++=	#4	1	
+j	for.loop.3.start	
+label	for.loop.3.end:	
+label	for.loop.7.start:	
+read	func	
+=	#0	$v0	
+-	$0	1	
+<=	#0	@-1	
+beq	@-1	$0	if.6.end	
+j	for.loop.7.end	
+label	if.6.end:	
+paras	#-8	#0	
+call	fun	
+write	@-1	
+label	for.loop.7.next:	
+j	for.loop.7.start	
+label	for.loop.7.end:	
+addi	$sp	$sp	24	
+return	0	

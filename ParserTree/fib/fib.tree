@@ -1,0 +1,116 @@
+12 PROGRAM: EXTDEFS
+	12 EXTDEFS: EXTDEFS EXTDEF
+		3 EXTDEFS: EXTDEFS EXTDEF
+			2 EXTDEFS: EXTDEFS EXTDEF
+				1 EXTDEFS: EXTDEFS EXTDEF
+					1 EXTDEFS: null
+					1 EXTDEF: TYPE EXTVARS ;
+						1 int
+						1 EXTVARS: VAR = INIT
+							1 VAR: VAR [ INT ]
+								1 VAR: ID
+									1 a
+								1 5000
+							1 INIT: { ARGS }
+								1 ARGS: ARGS , EXPS
+									1 ARGS: EXPS
+										1 EXPS: INT
+											1 1
+									1 EXPS: INT
+										1 1
+				2 EXTDEF: TYPE EXTVARS ;
+					2 int
+					2 EXTVARS: VAR = INIT
+						2 VAR: ID
+							2 mod
+						2 INIT: EXPS
+							2 EXPS: INT
+								2 1000000007
+			3 EXTDEF: TYPE EXTVARS ;
+				3 int
+				3 EXTVARS: VAR
+					3 VAR: ID
+						3 n
+		12 EXTDEF: TYPE FUNC STMTBLOCK
+			12 int
+			5 FUNC: ID ( PARA )
+				5 main
+				5 PARA: null
+			12 STMTBLOCK: { DEFS STMTS }
+				6 DEFS: DEFS TYPE DECS ;
+					5 DEFS: null
+					6 int
+					6 DECS: VAR
+						6 VAR: ID
+							6 x
+				11 STMTS: STMTS STMT
+					10 STMTS: STMTS STMT
+						7 STMTS: STMTS STMT
+							7 STMTS: null
+							7 STMT: READ ( EXPS );
+								7 read
+								7 EXPS: ID
+									7 n
+						10 STMT: FOR ( EXP ; EXP ; EXP ) STMT
+							10 for
+							8 EXP: EXPS
+								8 =
+									8 EXPS: ID
+										8 x
+									8 EXPS: INT
+										8 2
+							8 EXP: EXPS
+								8 <
+									8 EXPS: ID
+										8 x
+									8 EXPS: ID
+										8 n
+							8 EXP: EXPS
+								8 EXPS: UNARY_OP EXPS
+									8 ++
+									8 EXPS: ID
+										8 x
+							10 STMT: STMTBLOCK
+								10 STMTBLOCK: { DEFS STMTS }
+									8 DEFS: null
+									9 STMTS: STMTS STMT
+										9 STMTS: null
+										9 STMT: EXP ;
+											9 EXP: EXPS
+												9 =
+													9 EXPS: ID ARRS
+														9 a
+														9 ARRS: [ EXPS ]
+															9 EXPS: ID
+																9 x
+													9 %
+														9 EXPS: ( EXPS )
+															9 +
+																9 EXPS: ID ARRS
+																	9 a
+																	9 ARRS: [ EXPS ]
+																		9 -
+																			9 EXPS: ID
+																				9 x
+																			9 EXPS: INT
+																				9 2
+																9 EXPS: ID ARRS
+																	9 a
+																	9 ARRS: [ EXPS ]
+																		9 -
+																			9 EXPS: ID
+																				9 x
+																			9 EXPS: INT
+																				9 1
+														9 EXPS: ID
+															9 mod
+					11 STMT: WRITE ( EXPS );
+						11 write
+						11 EXPS: ID ARRS
+							11 a
+							11 ARRS: [ EXPS ]
+								11 -
+									11 EXPS: ID
+										11 n
+									11 EXPS: INT
+										11 1

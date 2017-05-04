@@ -1,0 +1,105 @@
+19 PROGRAM: EXTDEFS
+	19 EXTDEFS: EXTDEFS EXTDEF
+		1 EXTDEFS: EXTDEFS EXTDEF
+			1 EXTDEFS: null
+			1 EXTDEF: TYPE EXTVARS ;
+				1 int
+				1 EXTVARS: VAR
+					1 VAR: VAR [ INT ]
+						1 VAR: ID
+							1 s
+						1 50
+		19 EXTDEF: TYPE FUNC STMTBLOCK
+			19 int
+			3 FUNC: ID ( PARA )
+				3 main
+				3 PARA: null
+			19 STMTBLOCK: { DEFS STMTS }
+				4 DEFS: DEFS TYPE DECS ;
+					3 DEFS: null
+					4 int
+					4 DECS: DECS , VAR
+						4 DECS: VAR
+							4 VAR: ID
+								4 n
+						4 VAR: ID
+							4 i
+				18 STMTS: STMTS STMT
+					17 STMTS: STMTS STMT
+						16 STMTS: STMTS STMT
+							6 STMTS: STMTS STMT
+								5 STMTS: STMTS STMT
+									5 STMTS: null
+									5 STMT: READ ( EXPS );
+										5 read
+										5 EXPS: ID
+											5 n
+								6 STMT: EXP ;
+									6 EXP: EXPS
+										6 =
+											6 EXPS: ID
+												6 i
+											6 EXPS: INT
+												6 0
+							16 STMT: FOR ( EXP ; EXP ; EXP ) STMT
+								16 for
+								7 EXP: null
+								7 EXP: EXPS
+									7 EXPS: INT
+										7 1
+								7 EXP: null
+								16 STMT: STMTBLOCK
+									16 STMTBLOCK: { DEFS STMTS }
+										7 DEFS: null
+										15 STMTS: STMTS STMT
+											14 STMTS: STMTS STMT
+												14 STMTS: STMTS STMT
+													8 STMTS: null
+													14 STMT: IF ( EXPS ) STMT
+														14 if
+														8 <=
+															8 EXPS: ID
+																8 n
+															8 EXPS: INT
+																8 10
+														13 STMT: IF ( EXPS ) STMT ELSE STMT
+															13 if
+															9 >
+																9 EXPS: ID
+																	9 i
+																9 EXPS: ID
+																	9 n
+															10 STMT: BREAK ;
+																10 break
+															13 else
+															13 STMT: STMTBLOCK
+																13 STMTBLOCK: { DEFS STMTS }
+																	11 DEFS: null
+																	12 STMTS: STMTS STMT
+																		12 STMTS: null
+																		12 STMT: EXP ;
+																			12 EXP: EXPS
+																				12 EXPS: UNARY_OP EXPS
+																					12 ++
+																					12 EXPS: ID
+																						12 i
+												14 STMT: EXP ;
+													14 EXP: EXPS
+														14 EXPS: UNARY_OP EXPS
+															14 --
+															14 EXPS: ID
+																14 n
+											15 STMT: EXP ;
+												15 EXP: EXPS
+													15 EXPS: UNARY_OP EXPS
+														15 ++
+														15 EXPS: ID
+															15 i
+						17 STMT: WRITE ( EXPS );
+							17 write
+							17 EXPS: ID
+								17 n
+					18 STMT: WRITE ( EXPS );
+						18 write
+						18 EXPS: ID
+							18 i

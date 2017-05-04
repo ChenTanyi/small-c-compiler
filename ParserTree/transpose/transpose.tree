@@ -1,0 +1,344 @@
+27 PROGRAM: EXTDEFS
+	27 EXTDEFS: EXTDEFS EXTDEF
+		16 EXTDEFS: EXTDEFS EXTDEF
+			2 EXTDEFS: EXTDEFS EXTDEF
+				1 EXTDEFS: null
+				2 EXTDEF: TYPE EXTVARS ;
+					2 int
+					2 EXTVARS: VAR = INIT
+						2 VAR: VAR [ INT ]
+							2 VAR: VAR [ INT ]
+								2 VAR: ID
+									2 s
+								2 5
+							2 5
+						2 INIT: { ARGS }
+							2 ARGS: ARGS , EXPS
+								2 ARGS: ARGS , EXPS
+									2 ARGS: ARGS , EXPS
+										2 ARGS: ARGS , EXPS
+											2 ARGS: ARGS , EXPS
+												2 ARGS: ARGS , EXPS
+													2 ARGS: ARGS , EXPS
+														2 ARGS: ARGS , EXPS
+															2 ARGS: ARGS , EXPS
+																2 ARGS: ARGS , EXPS
+																	2 ARGS: ARGS , EXPS
+																		2 ARGS: ARGS , EXPS
+																			2 ARGS: ARGS , EXPS
+																				2 ARGS: ARGS , EXPS
+																					2 ARGS: ARGS , EXPS
+																						2 ARGS: ARGS , EXPS
+																							2 ARGS: ARGS , EXPS
+																								2 ARGS: ARGS , EXPS
+																									2 ARGS: ARGS , EXPS
+																										2 ARGS: ARGS , EXPS
+																											2 ARGS: ARGS , EXPS
+																												2 ARGS: ARGS , EXPS
+																													2 ARGS: ARGS , EXPS
+																														2 ARGS: ARGS , EXPS
+																															2 ARGS: EXPS
+																																2 EXPS: INT
+																																	2 1
+																															2 EXPS: INT
+																																2 2
+																														2 EXPS: INT
+																															2 3
+																													2 EXPS: INT
+																														2 4
+																												2 EXPS: INT
+																													2 5
+																											2 EXPS: INT
+																												2 6
+																										2 EXPS: INT
+																											2 7
+																									2 EXPS: INT
+																										2 8
+																								2 EXPS: INT
+																									2 9
+																							2 EXPS: INT
+																								2 10
+																						2 EXPS: INT
+																							2 11
+																					2 EXPS: INT
+																						2 12
+																				2 EXPS: INT
+																					2 13
+																			2 EXPS: INT
+																				2 14
+																		2 EXPS: INT
+																			2 15
+																	2 EXPS: INT
+																		2 16
+																2 EXPS: INT
+																	2 17
+															2 EXPS: INT
+																2 18
+														2 EXPS: INT
+															2 19
+													2 EXPS: INT
+														2 20
+												2 EXPS: INT
+													2 21
+											2 EXPS: INT
+												2 22
+										2 EXPS: INT
+											2 23
+									2 EXPS: INT
+										2 24
+								2 EXPS: INT
+									2 25
+			16 EXTDEF: TYPE FUNC STMTBLOCK
+				16 int
+				4 FUNC: ID ( PARA )
+					4 transpose
+					4 PARA: PARAS
+						4 PARAS: TYPE ID
+							4 int
+							4 n
+				16 STMTBLOCK: { DEFS STMTS }
+					5 DEFS: DEFS TYPE DECS ;
+						4 DEFS: null
+						5 int
+						5 DECS: DECS , VAR
+							5 DECS: DECS , VAR
+								5 DECS: VAR
+									5 VAR: VAR [ INT ]
+										5 VAR: VAR [ INT ]
+											5 VAR: ID
+												5 c
+											5 5
+										5 5
+								5 VAR: ID
+									5 i
+							5 VAR: ID
+								5 j
+					15 STMTS: STMTS STMT
+						10 STMTS: STMTS STMT
+							6 STMTS: null
+							10 STMT: FOR ( EXP ; EXP ; EXP ) STMT
+								10 for
+								6 EXP: EXPS
+									6 =
+										6 EXPS: ID
+											6 i
+										6 EXPS: INT
+											6 0
+								6 EXP: EXPS
+									6 <
+										6 EXPS: ID
+											6 i
+										6 EXPS: ID
+											6 n
+								6 EXP: EXPS
+									6 EXPS: UNARY_OP EXPS
+										6 ++
+										6 EXPS: ID
+											6 i
+								10 STMT: STMTBLOCK
+									10 STMTBLOCK: { DEFS STMTS }
+										6 DEFS: null
+										9 STMTS: STMTS STMT
+											7 STMTS: null
+											9 STMT: FOR ( EXP ; EXP ; EXP ) STMT
+												9 for
+												7 EXP: EXPS
+													7 =
+														7 EXPS: ID
+															7 j
+														7 EXPS: INT
+															7 0
+												7 EXP: EXPS
+													7 <
+														7 EXPS: ID
+															7 j
+														7 EXPS: ID
+															7 n
+												7 EXP: EXPS
+													7 EXPS: UNARY_OP EXPS
+														7 ++
+														7 EXPS: ID
+															7 j
+												9 STMT: STMTBLOCK
+													9 STMTBLOCK: { DEFS STMTS }
+														7 DEFS: null
+														8 STMTS: STMTS STMT
+															8 STMTS: null
+															8 STMT: EXP ;
+																8 EXP: EXPS
+																	8 =
+																		8 EXPS: ID ARRS
+																			8 c
+																			8 ARRS: ARRS [ EXPS ]
+																				8 ARRS: [ EXPS ]
+																					8 EXPS: ID
+																						8 i
+																				8 EXPS: ID
+																					8 j
+																		8 EXPS: ID ARRS
+																			8 s
+																			8 ARRS: ARRS [ EXPS ]
+																				8 ARRS: [ EXPS ]
+																					8 EXPS: ID
+																						8 j
+																				8 EXPS: ID
+																					8 i
+						15 STMT: FOR ( EXP ; EXP ; EXP ) STMT
+							15 for
+							11 EXP: EXPS
+								11 =
+									11 EXPS: ID
+										11 i
+									11 EXPS: INT
+										11 0
+							11 EXP: EXPS
+								11 <
+									11 EXPS: ID
+										11 i
+									11 EXPS: ID
+										11 n
+							11 EXP: EXPS
+								11 EXPS: UNARY_OP EXPS
+									11 ++
+									11 EXPS: ID
+										11 i
+							15 STMT: STMTBLOCK
+								15 STMTBLOCK: { DEFS STMTS }
+									11 DEFS: null
+									14 STMTS: STMTS STMT
+										12 STMTS: null
+										14 STMT: FOR ( EXP ; EXP ; EXP ) STMT
+											14 for
+											12 EXP: EXPS
+												12 =
+													12 EXPS: ID
+														12 j
+													12 EXPS: INT
+														12 0
+											12 EXP: EXPS
+												12 <
+													12 EXPS: ID
+														12 j
+													12 EXPS: ID
+														12 n
+											12 EXP: EXPS
+												12 EXPS: UNARY_OP EXPS
+													12 ++
+													12 EXPS: ID
+														12 j
+											14 STMT: STMTBLOCK
+												14 STMTBLOCK: { DEFS STMTS }
+													12 DEFS: null
+													13 STMTS: STMTS STMT
+														13 STMTS: null
+														13 STMT: EXP ;
+															13 EXP: EXPS
+																13 =
+																	13 EXPS: ID ARRS
+																		13 s
+																		13 ARRS: ARRS [ EXPS ]
+																			13 ARRS: [ EXPS ]
+																				13 EXPS: ID
+																					13 i
+																			13 EXPS: ID
+																				13 j
+																	13 EXPS: ID ARRS
+																		13 c
+																		13 ARRS: ARRS [ EXPS ]
+																			13 ARRS: [ EXPS ]
+																				13 EXPS: ID
+																					13 i
+																			13 EXPS: ID
+																				13 j
+		27 EXTDEF: TYPE FUNC STMTBLOCK
+			27 int
+			18 FUNC: ID ( PARA )
+				18 main
+				18 PARA: null
+			27 STMTBLOCK: { DEFS STMTS }
+				19 DEFS: DEFS TYPE DECS ;
+					18 DEFS: null
+					19 int
+					19 DECS: DECS , VAR
+						19 DECS: DECS , VAR
+							19 DECS: VAR
+								19 VAR: ID
+									19 n
+							19 VAR: ID
+								19 i
+						19 VAR: ID
+							19 j
+				26 STMTS: STMTS STMT
+					21 STMTS: STMTS STMT
+						20 STMTS: STMTS STMT
+							20 STMTS: null
+							20 STMT: READ ( EXPS );
+								20 read
+								20 EXPS: ID
+									20 n
+						21 STMT: EXP ;
+							21 EXP: EXPS
+								21 EXPS: ID ( ARG )
+									21 transpose
+									21 ARG: ARGS
+										21 ARGS: EXPS
+											21 EXPS: ID
+												21 n
+					26 STMT: FOR ( EXP ; EXP ; EXP ) STMT
+						26 for
+						22 EXP: EXPS
+							22 =
+								22 EXPS: ID
+									22 i
+								22 EXPS: INT
+									22 0
+						22 EXP: EXPS
+							22 <
+								22 EXPS: ID
+									22 i
+								22 EXPS: ID
+									22 n
+						22 EXP: EXPS
+							22 EXPS: UNARY_OP EXPS
+								22 ++
+								22 EXPS: ID
+									22 i
+						26 STMT: STMTBLOCK
+							26 STMTBLOCK: { DEFS STMTS }
+								22 DEFS: null
+								25 STMTS: STMTS STMT
+									23 STMTS: null
+									25 STMT: FOR ( EXP ; EXP ; EXP ) STMT
+										25 for
+										23 EXP: EXPS
+											23 =
+												23 EXPS: ID
+													23 j
+												23 EXPS: INT
+													23 0
+										23 EXP: EXPS
+											23 <
+												23 EXPS: ID
+													23 j
+												23 EXPS: ID
+													23 n
+										23 EXP: EXPS
+											23 EXPS: UNARY_OP EXPS
+												23 ++
+												23 EXPS: ID
+													23 j
+										25 STMT: STMTBLOCK
+											25 STMTBLOCK: { DEFS STMTS }
+												23 DEFS: null
+												24 STMTS: STMTS STMT
+													24 STMTS: null
+													24 STMT: WRITE ( EXPS );
+														24 write
+														24 EXPS: ID ARRS
+															24 s
+															24 ARRS: ARRS [ EXPS ]
+																24 ARRS: [ EXPS ]
+																	24 EXPS: ID
+																		24 i
+																24 EXPS: ID
+																	24 j
